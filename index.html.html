@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-image: url(R.jpeg);">
+    <div class="container">
+        <img src="icegif-886.gif" />
+        <div class="message">Gracias por ser mi novia.</div>
+        <button class="next-button" onclick="nextPage()">Siguiente</button>
+    </div>
+
+    <div class="container hidden" id="page2">
+        <div class="message">
+            Gracias por ser mi novia.
+             Ya sé que no soy perfecto, no soy el príncipe azul que esperabas ni el mejor hombre, pero lo único que te pido es que me ayudes a ser mejor y ser ese príncipe que has querido para poder estar en las buenas y en las malas contigo. Quiero pasar contigo el resto de mi vida y hacerte feliz. TE AMO MUCHO.
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            document.querySelector('.container').classList.add('hidden');
+            document.getElementById('page2').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
